@@ -1,0 +1,12 @@
+<!-- app.component.html -->
+
+<div>
+  <label for="categoriaInput">Digite a categoria:</label>
+  <input type="text" id="categoriaInput" [(ngModel)]="categoriaSelecionada" />
+  <button (click)="filtrarFilmes()">Filtrar</button>
+</div>
+
+<div *ngFor="let filme of filmesFiltrados">
+  <p>{{ filme.nome }} - {{ filme.categoria }}</p>
+</div>
+
