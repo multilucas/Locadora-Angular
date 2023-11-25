@@ -1,4 +1,4 @@
-<!-- app.component.html -->
+<h1>Minha locadora</h1><!-- app.component.html -->
 
 <div>
   <label for="categoriaInput">Digite a categoria:</label>
@@ -6,7 +6,8 @@
   <button (click)="filtrarFilmes()">Filtrar</button>
 </div>
 
-<div *ngFor="let filme of filmesFiltrados">
-  <p>{{ filme.nome }} - {{ filme.categoria }}</p>
-</div>
-
+<ul>
+  <li *ngFor="let filme of filmesFiltrados">
+    <a href="#">{{ filme.nome }} - {{ filme.categoria }}</a>
+  </li>
+</ul>
